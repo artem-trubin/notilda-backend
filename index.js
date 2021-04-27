@@ -38,7 +38,7 @@ app.use('/api/notes', notesRouter)
 
 
 // Start of the server
-const PORT = process.env.port || 4200
+const PORT = process.env.PORT || 5000
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`)
 })
