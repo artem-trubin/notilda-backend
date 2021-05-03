@@ -9,4 +9,13 @@ const requestLogger = (request, response, next) => {
   next()
 }
 
-module.exports = { requestLogger }
+const getTokenFrom = request => {
+  const authorization = request.get('authorization')
+  if (authorization && authorization.toLowerCase().startsWith('bearer ')) {
+    return authorization.substring(7)
+  }
+
+  return null
+}
+
+module.exports = { requestLogger, getTokenFrom }

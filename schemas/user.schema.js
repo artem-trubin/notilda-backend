@@ -7,7 +7,7 @@ const userSchema = new mongoose.Schema({
     type: String,
     unique: true,
   },
-  passHash: String,
+  passhash: String,
   id: {
     type: String,
     unique: true,

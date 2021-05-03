@@ -33,9 +33,12 @@ mongoose.connect(url, {
 
 // Routers block
 const notesRouter = require('./controllers/notes')
+const usersRouter = require('./controllers/users')
+const loginRouter = require('./controllers/login')
 
 app.use('/api/notes', notesRouter)
-
+app.use('/api/users', usersRouter)
+app.use('/api/login', loginRouter)
 
 // Start of the server
 const PORT = process.env.PORT || 5000
